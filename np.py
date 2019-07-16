@@ -77,3 +77,126 @@ def show_dtype(list_x,dtype):
 #sprint(array_linspace_reshape)
     
 #基础运算
+#a = np.arange(1,8,2)
+#b = np.array([10,25,-5,10.2])
+
+#sprint(a)
+#sprint(b)
+#sprint(a-b)
+#sprint(a*b)
+#sprint(a**2)
+#sprint(10*np.sin(a))
+#sprint(a<3)
+#sprint(a.dot(b))
+#sprint(np.dot(a,b))
+
+
+#a = np.arange(1,5).reshape(2,2)
+#sprint(a)
+#b = np.array([[0,1],[1,0]])
+#sprint(b)
+###矩阵没有交换律，左乘行变换，右乘列变换
+#sprint(a.dot(b))
+#sprint(b.dot(a))
+
+###求矩阵的一些数字特征
+#a = np.random.random((2,4))
+#sprint(a)
+##全空间
+#sprint(np.sum(a))
+#sprint(np.min(a))
+#sprint(np.max(a))
+#sprint(np.mean(a))
+#sprint(np.median(a))
+##列维度的数字特征，axis=0:跨列运算
+#sprint(np.sum(a,axis=0))
+#sprint(np.min(a,axis=0))
+#sprint(np.max(a,axis=0))
+#sprint(np.mean(a,axis=0))
+#sprint(np.median(a,axis=0))
+##行维度的数字特征，axis=1:跨行运算
+#sprint(np.sum(a,axis=1))
+#sprint(np.min(a,axis=1))
+#sprint(np.max(a,axis=1))
+#sprint(np.mean(a,axis=1))
+#sprint(np.median(a,axis=1))
+
+#A = np.arange(2,14).reshape((3,4))
+#sprint(A)
+##arg表示解的位置,抽成一维
+#sprint(np.argmin(A))
+#sprint(np.argmax(A))
+##累加
+#sprint(np.cumsum(A))
+##对差
+#sprint(np.diff(A))
+
+#找出非0元素的行列索引
+#A = np.identity(4)
+#sprint(np.nonzero(A))
+#for i in range(len(np.nonzero(A)[0])):
+#    print('({},{})'.format(np.nonzero(A)[0][i],np.nonzero(A)[1][i]))
+
+#排序
+#A = np.arange(14,2,-1).reshape((3,4))
+##多维默认axis=0
+#np.random.shuffle(A)
+#sprint(A)
+##默认行排序
+#sprint(np.sort(A))
+##列排序 指定axis=0
+#sprint(np.sort(A,axis=0))
+    
+#转置
+#A=np.identity(4)
+#np.random.shuffle(A)
+#sprint(A)
+#sprint(A.T)
+#单位正交，A-1=AT
+#sprint(A.T.dot(A))
+
+#线性代数模块
+#A = np.random.randint(10,size=(3,3))#随机产生0-9填充的3*3矩阵
+#sprint(A)
+##行列式
+#sprint(np.linalg.det(A))
+##逆
+#sprint(np.linalg.inv(A))
+##特征值和特征向量
+#sprint(np.linalg.eig(A))
+#用于对称矩阵的特征值特征向量
+#A = np.random.randint(10,size=(3,3))
+#A = A + A.T
+#sprint(A)
+#sprint(np.linalg.eig(A))
+#sprint(np.linalg.eigh(A))
+#仅特征值
+#sprint(np.linalg.eigvals(A))
+#sprint(np.linalg.eigvalsh(A))
+##求解线性方程组Ax=b
+#b=np.array([0,1,2])
+#sprint(np.linalg.solve(A,b))
+##奇异矩阵，会报错
+#A = np.arange(0,9).reshape((3,3))#奇异矩阵
+#sprint(np.linalg.solve(A,b))
+
+#clip限制矩阵的最大值和最小值
+#A = np.arange(0,9).reshape((3,3))
+#sprint(A)
+#sprint(np.clip(A,3,5))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
