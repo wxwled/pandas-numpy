@@ -5,14 +5,14 @@ Created on Thu Jul 18 15:27:48 2019
 @author: Administrator
 """
 
-#from mpl_toolkits.mplot3d import Axes3D
-#import numpy as np
-#from matplotlib import pyplot as plt
-#fig = plt.figure()
-#ax = Axes3D(fig)
-#x = np.arange(-2 * np.pi, 2 * np.pi, 0.1)
-#y = np.arange(-2 * np.pi, 2 * np.pi, 0.1)
-#X, Y = np.meshgrid(x, y)  # 网格的创建，生成二维数组
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+from matplotlib import pyplot as plt
+fig = plt.figure()
+ax = Axes3D(fig)
+x = np.arange(-2 * np.pi, 2 * np.pi, 0.1)
+y = np.arange(-2 * np.pi, 2 * np.pi, 0.1)
+X, Y = np.meshgrid(x, y)  # 网格的创建，生成二维数组
 ##X=np.array(x)
 ##Y=np.array(y)
 ##print(type(X),X)
@@ -21,13 +21,13 @@ Created on Thu Jul 18 15:27:48 2019
 #Z=-X**2-Y**2
 ##Z=2*X+2*Y
 ##Z=4*np.sin(X)+Y**2
-##Z=np.exp(-1*(X**2+Y**2))
+Z=np.exp(-1*(X**2+Y**2))
 ##print(type(Z),Z)
-#plt.xlabel('x')
-#plt.ylabel('y')
-##ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
-##plt.contourf(X,Y,Z,cmap="rainbow")
-##plt.show()
+plt.xlabel('x')
+plt.ylabel('y')
+ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
+#plt.contourf(X,Y,Z,cmap="rainbow")
+plt.show()
 #
 
 
@@ -113,21 +113,21 @@ Created on Thu Jul 18 15:27:48 2019
 #plt.show()
 
 
-import matplotlib.pyplot as plt
-import numpy as np
-
-X, Y = np.meshgrid(np.arange(-1 * np.pi, 1 * np.pi, .2), np.arange(-1 * np.pi, 1 * np.pi, .2))
-U = np.exp(-1*(X**2+Y**2))*(-2)*X
-V = np.exp(-1*(X**2+Y**2))*(-2)*Y
-# sphinx_gallery_thumbnail_number = 3
-
-fig3, ax3 = plt.subplots()
-ax3.set_title("pivot='tip'; scales with x view")
-M = np.hypot(U, V)#斜边长
-Q = ax3.quiver(X, Y, U, V, M, units='x', pivot='tip', width=0.022,
-               scale=1 / 0.15,cmap='rainbow')
-qk = ax3.quiverkey(Q, 0.9, 0.9, 1, r'$1 \frac{m}{s}$', labelpos='E',
-                   coordinates='figure')
-ax3.scatter(X, Y, color='0.5', s=1)
-
-plt.show()
+#import matplotlib.pyplot as plt
+#import numpy as np
+#
+#X, Y = np.meshgrid(np.arange(-1 * np.pi, 1 * np.pi, .2), np.arange(-1 * np.pi, 1 * np.pi, .2))
+#U = np.exp(-1*(X**2+Y**2))*(-2)*X
+#V = np.exp(-1*(X**2+Y**2))*(-2)*Y
+## sphinx_gallery_thumbnail_number = 3
+#
+#fig3, ax3 = plt.subplots()
+#ax3.set_title("pivot='tip'; scales with x view")
+#M = np.hypot(U, V)#斜边长
+#Q = ax3.quiver(X, Y, U, V, M, units='x', pivot='tip', width=0.022,
+#               scale=1 / 0.15,cmap='rainbow')
+#qk = ax3.quiverkey(Q, 0.9, 0.9, 1, r'$1 \frac{m}{s}$', labelpos='E',
+#                   coordinates='figure')
+#ax3.scatter(X, Y, color='0.5', s=1)
+#
+#plt.show()
